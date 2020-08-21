@@ -35,7 +35,7 @@ const App = () => {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Labore excepturi repudiandae minima ad dolores libero iure
           cupiditate ea ab perferendis autem porro, enim explicabo eos illum
-          distinctio aperiam tempora cumque.
+          distinctio aperiam tempora.
           </p>
         </div>
       </div>
