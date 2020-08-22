@@ -5,24 +5,44 @@ import { IconButton } from '@material-ui/core';
 import alnBtn from '@alan-ai/alan-sdk-web';
 import './App.css';
 import NewsCards from './Components/NewsCards/NewsCards.js';
+import WordsToNumbers from 'words-to-numbers';
 
 const App = () => {
+  console.log("App");
   const Alankey = '3f5bfbc63a56197c18c361921f07ef3c2e956eca572e1d8b807a3e2338fdd0dc/stage';
+
   const [newsArticles, setNewsArticles] = useState([]);
+  const [newIndex, setNewIndex] = useState(-1);
+
   useEffect(() => {
+    console.log("Before alan useEffect");
     alnBtn({
       key: Alankey,
-      onCommand: ({ command, articles }) => {
+      onCommand: ({ command, articles, index, number }) => {
         if (command === 'TopHeadlines') {
+          console.log("inside alan");
           setNewsArticles(articles);
         }
-        else if (command === '') {
-          setNewsArticles(articles);
+        else if (command === 'ReadHeadlines') {
+          setNewIndex((prevNewIndex) => (prevNewIndex + 1));
+        }
+        else if (command === 'Open') {
+
+          const parsedNumber = WordsToNumbers(number, { fuzzy: true });
+          const article = articles[parsedNumber - 1];
+
+          if (parsedNumber > 20) {
+            alnBtn().playText("Please try again")
+          }
+          else {
+            window.open(article.url, '_blank');
+          }
+
         }
       }
 
     });
-
+    console.log("After alan useEffect");
   }, []);
 
   return (
@@ -32,13 +52,14 @@ const App = () => {
           <h1>Hey ! Ask me about NEWS</h1>
         </div>
         <div className="hero-para">
-          <p>Try pressing the Hovering Mic button at the bottom of this page and ask Alan about the Latest News or about some other stuff.
+          <p>Try pressing the Hovering Mic button at the bottom of this page
+          and ask Alan about the Latest News or about some other stuff.
           </p>
         </div>
       </div>
 
       <div style={{ backgroundColor: "#DEF2F1", flexGrow: 1 }}>
-        <NewsCards articles={newsArticles} />
+        <NewsCards articles={newsArticles} newIndex={newIndex} />
       </div>
       <div className="footer">
         <p className="copyright">&copy; Harshil Corp.</p>

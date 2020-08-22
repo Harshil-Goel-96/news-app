@@ -3,7 +3,13 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles({
     container: {
         maxWidth: "400px",
-        height: "450px",
+        height: "445px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    },
+    activecard: {
+        borderBottom: "5px solid blue"
     },
     media: {
         height: "160px"

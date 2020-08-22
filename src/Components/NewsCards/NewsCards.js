@@ -4,8 +4,9 @@ import NewsCard from '../NewsCard/NewsCard.js'
 import useStyles from './Style.js';
 import HomeContent from './HomeContent.js';
 
-const NewsCards = ({ articles }) => {
-    console.log(articles);
+const NewsCards = ({ articles, newIndex }) => {
+    //console.log(articles);
+    console.log("NewsCards")
     const classes = useStyles();
 
     if (!articles.length) {
@@ -15,9 +16,9 @@ const NewsCards = ({ articles }) => {
                 <div style={{ padding: "40px 20px 20px 20px" }}>
                     <Grid container spacing={1} justify="center" alignItems="center">
                         {
-                            HomeContent.map((content) => (
+                            HomeContent.map((content, k) => (
 
-                                <Grid item xs={12} sm={6} md={3} lg={3} className={classes.gridItem}>
+                                <Grid key={k} item xs={12} sm={6} md={3} lg={3} className={classes.gridItem}>
                                     <Card className={classes.homeCard} style={{ backgroundColor: content.bgColor }} elevation={5}>
                                         <Typography variant="h4">{content.heading}</Typography>
                                         <Typography variant="body1"><strong>{content.heading.split(" ")[2]}</strong> : {content.Example}</Typography>
@@ -41,8 +42,8 @@ const NewsCards = ({ articles }) => {
                     {
                         articles.map((article, i) => (
 
-                            <Grid item xs={12} sm={6} lg={4} className={classes.gridItem}>
-                                <NewsCard article={article} i={i} />
+                            <Grid key={i} item xs={12} sm={6} lg={4} className={classes.gridItem}>
+                                <NewsCard article={article} i={i} newIndex={newIndex} />
                             </Grid>
 
                         ))
