@@ -9,7 +9,7 @@ const useStyles = makeStyles({
         justifyContent: "space-between"
     },
     activecard: {
-        borderBottom: "5px solid blue"
+        borderBottom: "5px solid #3f51b5"
     },
     media: {
         height: "160px"
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     },
     actionarea: {
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-between"
     }
 });
 

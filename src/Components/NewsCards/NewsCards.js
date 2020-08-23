@@ -13,16 +13,16 @@ const NewsCards = ({ articles, newIndex }) => {
 
         return (
             <Grow in timeout={500}>
-                <div style={{ padding: "40px 20px 20px 20px" }}>
+                <div style={{ padding: "35px 20px 20px 20px" }}>
                     <Grid container spacing={1} justify="center" alignItems="center">
                         {
                             HomeContent.map((content, k) => (
 
                                 <Grid key={k} item xs={12} sm={6} md={3} lg={3} className={classes.gridItem}>
                                     <Card className={classes.homeCard} style={{ backgroundColor: content.bgColor }} elevation={5}>
-                                        <Typography variant="h4">{content.heading}</Typography>
-                                        <Typography variant="body1"><strong>{content.heading.split(" ")[2]}</strong> : {content.Example}</Typography>
-                                        <Typography variant="body2">Try Saying : {content.Desc}</Typography>
+                                        <Typography variant="h5">{content.heading}</Typography>
+                                        <Typography variant="body1"><strong>{content.heading.split(" ")[2]} : </strong>{content.Example}</Typography>
+                                        <Typography variant="body2"><strong>Try Saying : </strong>{content.Desc}</Typography>
                                     </Card>
                                 </Grid>
 

@@ -8,7 +8,7 @@ const HomeContent = [
 
     },
     {
-        heading: "News By Sources",
+        heading: "News By Source",
         textColor: "White",
         bgColor: "#26A69A",
         Example: "BBC News, ABC News, CNN, IGN, TechCrunch etc",
@@ -16,7 +16,7 @@ const HomeContent = [
 
     },
     {
-        heading: "News By Topics",
+        heading: "News By Topic",
         textColor: "White",
         bgColor: "#0097A7",
         Example: "Trump, PS5, Coronavirus, Cars etc",
