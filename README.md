@@ -1,1 +1,1 @@
-cleared origin/master readme.md
+Alan AI News App made on React!.
