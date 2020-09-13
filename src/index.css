@@ -1,9 +1,11 @@
-*,html,body{
-  box-sizing:border-box;
+*,
+html,
+body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }

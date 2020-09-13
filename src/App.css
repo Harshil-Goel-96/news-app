@@ -1,69 +1,65 @@
-.main-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;    
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero{
-    background-color: #344955;
-    width: 100%;
-    padding:20px 0;
-    color:rgb(58, 216, 176);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;   
+.hero {
+  background-color: #344955;
+  width: 100%;
+  padding: 20px 0;
+  color: rgb(58, 216, 176);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.hero-heading{
-    
-    flex-basis: 35%;
-    font-size: 1.3rem;
-    text-align: center; 
-    cursor: pointer;  
+.hero-heading {
+  flex-basis: 35%;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
 }
 
-.hero-para{ 
-    flex-basis: 40%;
-    text-align: center;  
+.hero-para {
+  flex-basis: 40%;
+  text-align: center;
 }
 
-.footer{
-    display: flex;
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #344955;
+  color: rgb(166, 180, 180);
+}
+
+.follow-pal {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-para {
+    padding: 5px;
+  }
+
+  .footer {
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 10px;
-    background-color: #344955;
-    color: rgb(166, 180, 180);
+  }
+  .follow-pal {
+    width: 100%;
+  }
 }
-
-.follow-pal{
-    display: flex;
-    width:20%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-@media (max-width:768px){
-    .hero{
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .hero-para{ 
-        padding: 5px; 
-    }
-
-    .footer{
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .follow-pal{
-        width: 100%;
-    }
-    
-}
-
-
