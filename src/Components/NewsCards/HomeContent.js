@@ -12,7 +12,7 @@ const HomeContent = [
         textColor: "White",
         bgColor: "#26A69A",
         Example: "BBC News, ABC News, CNN, IGN, TechCrunch etc",
-        Desc: "Give me the Top headlines from BBC News OR Tell me the Top headlines from CNN News"
+        Desc: "Give me the top headlines from BBC News OR Tell me the top headlines from CNN"
 
     },
     {
@@ -28,7 +28,7 @@ const HomeContent = [
         textColor: "White",
         bgColor: "#5C6BC0",
         Example: "Business, Technology, Entertainment etc",
-        Desc: "Give me the Top Business news from India"
+        Desc: "What are the technology headlines from India OR What is the business news from India"
 
     }
 ];
