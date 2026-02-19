@@ -11,7 +11,6 @@ import WordsToNumbers from "words-to-numbers";
 
 const App = () => {
   console.log("App");
-  const Alankey = "3f5bfbc63a56197c18c361921f07ef3c2e956eca572e1d8b807a3e2338fdd0dc/stage";
 
   const [newsArticles, setNewsArticles] = useState([]);
   const [newIndex, setNewIndex] = useState(-1);
